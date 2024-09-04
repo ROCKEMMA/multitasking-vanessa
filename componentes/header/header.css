@@ -1,0 +1,102 @@
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    font-family: Arial, sans-serif;
+    gap: 10px;
+}
+
+/* Icono del menú */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    grid-column: 1; 
+    padding: 10px;
+    border-radius: 60%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.menu-icon img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); 
+}
+
+.menu-icon:hover {
+    background-color: #555; 
+    transform: scale(1.1); 
+}
+
+/* Nombre de la aplicación */
+.app-name {
+    font-weight: bold;
+    font-size: 20px;
+    grid-column: 2; 
+}
+
+/* Contenedor de la barra de búsqueda */
+.search-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    grid-column: 3; 
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    flex-grow: 1;
+    max-width: 300px;
+    margin: 0 20px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Botón de añadir */
+.add-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    grid-column: 4; 
+}
+
+/* Imagen del administrador */
+.admin-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+    grid-column: 5; 
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .search-bar {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-name {
+        display: none;
+    }
+    .search-bar {
+        display: none;
+    }
+    .add-button {
+        display: none;
+    }
+}
