@@ -1,10 +1,5 @@
+import { header } from "./componentes/header/header.js";
+
 let vinculo = document.querySelector(".root");
 
-vinculo.innerHTML = `
-
-<header></header>
-
-
-
-
-`
+vinculo.appendChild(header);

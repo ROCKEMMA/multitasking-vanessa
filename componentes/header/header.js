@@ -1,17 +1,41 @@
-let vinculoheader = document.querySelector("header");
+// Crear el elemento del menú
+let menuIcon = document.createElement('div');
+menuIcon.classList.add('menu-icon');
 
-vinculoheader.innerHTML = `
+let menuImage = document.createElement('img');
+menuImage.src = 'https://w7.pngwing.com/pngs/313/789/png-transparent-menu-list-options-ui-lines-icon.png';
+menuImage.alt = 'Menu';
+menuIcon.appendChild(menuImage);
 
-        <div class="menu-icon">
-            <img src="https://w7.pngwing.com/pngs/313/789/png-transparent-menu-list-options-ui-lines-icon.png" alt="Menu">
-        </div>
-        <h1>Multitasking</h1>
-        <div class="search-container">
-            <input type="text" placeholder="Buscar">
-            <button class="add-button">+</button>
-            <button class="emoji-button">🥇</button>
-        </div>
-        
+let title = document.createElement('h1');
+title.classList.add('app-name');  
+title.textContent = 'Multitasking';
 
+let searchContainer = document.createElement('div');
+searchContainer.classList.add('search-container');
 
-`
+let searchInput = document.createElement('input');
+searchInput.classList.add('search-bar');  
+searchInput.type = 'text';
+searchInput.placeholder = 'Buscar';
+
+let addButton = document.createElement('button');
+addButton.classList.add('add-button');
+addButton.textContent = '+';
+
+let emojiButton = document.createElement('button');
+emojiButton.classList.add('emoji-button');
+emojiButton.textContent = '🥇';
+
+searchContainer.appendChild(searchInput);
+searchContainer.appendChild(addButton);
+searchContainer.appendChild(emojiButton);
+
+let header = document.createElement('div');
+header.classList.add('header');
+
+header.appendChild(menuIcon);
+header.appendChild(title);
+header.appendChild(searchContainer);
+
+export { header };

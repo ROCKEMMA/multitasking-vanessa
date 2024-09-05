@@ -1,21 +1,22 @@
-header {
+.header {
     display: grid;
     grid-template-columns: auto 1fr auto auto;
     align-items: center;
     padding: 10px 20px;
-    background-color: #ffffff;
+    background-color: #2e619b75;
     border-bottom: 1px solid #e0e0e0;
     font-family: Arial, sans-serif;
     gap: 10px;
+    width: 100%; 
+    box-sizing: border-box;
 }
 
-/* Icono del menú */
+/* Menu Icon */
 .menu-icon {
     font-size: 24px;
     cursor: pointer;
-    grid-column: 1; 
     padding: 10px;
-    border-radius: 60%;
+    border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
     transition: background-color 0.3s ease, transform 0.3s ease; 
 }
@@ -23,40 +24,37 @@ header {
 .menu-icon img {
     width: 24px;
     height: 24px;
-    filter: invert(1); 
+    filter: invert(1);
 }
 
-.menu-icon:hover {
-    background-color: #555; 
-    transform: scale(1.1); 
-}
-
-/* Nombre de la aplicación */
+/* App Name */
 .app-name {
     font-weight: bold;
     font-size: 20px;
-    grid-column: 2; 
+    color: rgb(0, 0, 0);
+    white-space: nowrap; 
 }
 
-/* Contenedor de la barra de búsqueda */
+/* Search Container */
 .search-container {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    grid-column: 3; 
+    align-items: center;
+    width: 100%;
 }
 
-/* Barra de búsqueda */
+/* Search Bar */
 .search-bar {
     flex-grow: 1;
+    width: 100%;
     max-width: 300px;
-    margin: 0 20px;
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-/* Botón de añadir */
+/* Add Button */
 .add-button {
     background-color: #007bff;
     color: white;
@@ -65,38 +63,79 @@ header {
     width: 32px;
     height: 32px;
     font-size: 24px;
-    line-height: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    grid-column: 4; 
 }
 
-/* Imagen del administrador */
-.admin-image {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-left: 10px;
-    grid-column: 5; 
+/* Emoji Button */
+.emoji-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    .search-bar {
-        max-width: 200px;
+/* For small screens like mobile (up to 375px) */
+@media (max-width: 375px) {
+    .header {
+        grid-template-columns: auto 1fr auto; 
+        gap: 5px;
     }
-}
 
-@media (max-width: 480px) {
     .app-name {
-        display: none;
+        font-size: 16px; 
     }
+
     .search-bar {
-        display: none;
+        max-width: 200px; 
     }
+
+    .add-button, .emoji-button {
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+    }
+}
+
+/* For medium screens like tablets (up to 480px) */
+@media (max-width: 480px) {
+    .header {
+        grid-template-columns: auto 1fr auto; 
+    }
+
+    .app-name {
+        font-size: 18px; 
+    }
+
+    .search-bar {
+        max-width: 250px; 
+    }
+
     .add-button {
-        display: none;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* For larger screens like desktops (up to 1366px) */
+@media (min-width: 1366px) {
+    .header {
+        grid-template-columns: auto 1fr auto auto;
+    }
+
+    .app-name {
+        font-size: 24px;
+    }
+
+    .search-bar {
+        max-width: 400px;
+    }
+
+    .add-button {
+        width: 40px;
+        height: 40px;
     }
 }
