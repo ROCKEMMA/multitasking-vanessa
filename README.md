@@ -19,7 +19,7 @@ El propósito de la aplicación es ofrecer una solución simple y efectiva para 
 ### Publico objetivo:
 El público objetivo incluye estudiantes, profesionales, y cualquier persona que necesite una herramienta de productividad para gestionar su tiempo y tareas de manera eficiente.
 
-## Caracteristicas:
+## Caracteristicas:s
 Sistema modular: El proyecto está dividido en múltiples módulos, cada uno con una función específica, lo que facilita la mantenibilidad y escalabilidad.
 
 Sistema de carpetas: Los módulos están organizados en diferentes carpetas según su funcionalidad, lo que permite un fácil acceso y organización.
@@ -27,6 +27,8 @@ Sistema de carpetas: Los módulos están organizados en diferentes carpetas seg�
 Manipulación de datos: La información se maneja a través de listas de objetos, donde cada tarea es un objeto con sus propiedades como título, descripción, estado, etc.
 
 Funcionalidad de LocalStorage: Las tareas creadas y modificadas se almacenan en el navegador del usuario mediante LocalStorage, lo que permite persistencia de datos entre sesiones.
+![Descripción de la imagen](URL_de_la_imagen)
+https://excalidraw.com/#json=Lzbexf7nRWj1KpH9rq9Ib,_qDf8eFHblE_5ieYqH3cpA
 
 ## Instalacion y forma de uso:
 Aunque Multitasking no requiere instalación local, se puede clonar el repositorio para desarrollo y pruebas. El proyecto puede ejecutarse en cualquier servidor local o directamente desde la web.

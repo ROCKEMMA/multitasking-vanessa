@@ -17,7 +17,7 @@ searchContainer.classList.add('search-container');
 let searchInput = document.createElement('input');
 searchInput.classList.add('search-bar');  
 searchInput.type = 'text';
-searchInput.placeholder = 'Buscar';
+searchInput.placeholder = 'Buscar';                         
 
 let addButton = document.createElement('button');
 addButton.classList.add('add-button');
