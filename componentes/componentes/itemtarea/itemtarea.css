@@ -1,0 +1,82 @@
+.tarea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #000000; /* Líneas más negras */
+  padding: 20px 25px;
+  border-radius: 20px;
+  background-color: #f9fafb;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.2em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarea:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.nombre-tarea {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+}
+
+.columna-izq, .columna-centro, .columna-der {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.personas-asignadas, .fecha-entrega, .estado-tarea {
+  font-size: 1.2em;
+  color: #4a5568;
+  margin: 0;
+  padding: 10px 0;
+  /* Eliminamos la línea divisoria */
+  /* border-top: none; */
+}
+
+.fecha-entrega {
+  color: #718096;
+  font-weight: 500;
+}
+
+.emoji-usuario {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #edf2f7;
+  font-size: 2em;
+  margin-right: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  line-height: 55px;
+}
+
+.estado-tarea {
+  background-color: #48bb78;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-left: 15px;
+}
+
+.estado-tarea:hover {
+  background-color: #38a169;
+  transform: scale(1.05);
+}
+
+.tarea-completada {
+  color: #38a169;
+}
