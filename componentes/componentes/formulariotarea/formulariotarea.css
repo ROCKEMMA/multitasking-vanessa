@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif; /* Fuente general para el sitio */
+}
+
+.formulario-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 1000; 
+}
+
+.task-form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 500px;
+  max-width: 95%;
+  text-align: center;
+  border: none; /* Quitar el borde negro */
+  font-family: 'Poppins', sans-serif;
+}
+
+.task-form h2 {
+  margin-bottom: 20px;
+  color: #333333;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.task-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #007bff;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.task-form input,
+.task-form select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 2px solid #ced4da;
+  border-radius: 10px;
+  font-size: 1.1em;
+  background-color: #f0f3f5;
+  color: #495057;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-form input:focus,
+.task-form select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.create-task-button,
+.close-form {
+  padding: 12px 30px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.create-task-button {
+  background-color: #28a776;
+  color: white;
+  margin-right: 10px;
+}
+
+.create-task-button:hover {
+  background-color: #218838;
+  box-shadow: 0 0 10px rgba(33, 136, 56, 0.5);
+}
+
+.close-form {
+  background-color: #dc3546;
+  color: white;
+}
+
+.close-form:hover {
+  background-color: #c82333;
+  box-shadow: 0 0 10px rgba(200, 35, 51, 0.5);
+}

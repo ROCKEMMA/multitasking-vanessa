@@ -1,5 +1,5 @@
-import { tareas } from "../../../data/Dbtarea.js"; // Asegúrate de que la ruta es correcta
-import { usuarios } from "../../../data/DbUsuario.js"; // Asegúrate de que la ruta es correcta
+import { tareas } from "../../../data/Dbtarea.js"; 
+import { usuarios } from "../../../data/DbUsuario.js"; 
 
 // Función para crear un elemento HTML
 function crearElemento(tag, clase, contenido) {
@@ -12,8 +12,8 @@ function crearElemento(tag, clase, contenido) {
 // Función para obtener emojis de los usuarios asignados
 function obtenerEmojisDeUsuarios(idsUsuarios) {
   return idsUsuarios.map(id => {
+    
     const usuario = usuarios.find(user => user.id_usuario === id);
-    return usuario ? usuario.emoji : '😊'; // Devuelve el emoji del usuario o '?' si no existe
   });
 }
 
@@ -24,13 +24,13 @@ function crearTarea({ nombre, personas, fecha, estado }) {
   const nombreTarea = crearElemento('h3', 'nombre-tarea', nombre);
   tarea.appendChild(nombreTarea);
 
-  const personasAsignadas = crearElemento('p', 'personas-asignadas', `Personas asignadas: ${obtenerEmojisDeUsuarios(personas).join(' ')}`);
+  const personasAsignadas = crearElemento('p', 'personas-asignadas', `Personas asignadas ${obtenerEmojisDeUsuarios(personas).join(' ')}`);
   tarea.appendChild(personasAsignadas);
   
-  const fechaEntrega = crearElemento('p', 'fecha-entrega', `Fecha de entrega: ${fecha}`);
+  const fechaEntrega = crearElemento('p', 'fecha-entrega', `Fecha de entrega ${fecha}`);
   tarea.appendChild(fechaEntrega);
   
-  const estadoTarea = crearElemento('p', 'estado-tarea', `Estado: ${estado}`);
+  const estadoTarea = crearElemento('p', 'estado-tarea', `Estado ${estado}`);
   tarea.appendChild(estadoTarea);
   
   return tarea;
