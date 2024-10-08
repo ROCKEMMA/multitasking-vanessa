@@ -6,3 +6,4 @@ let vinculo = document.querySelector(".root");
 vinculo.appendChild(header);
 
 vinculo.appendChild(seccionTareas);
+
