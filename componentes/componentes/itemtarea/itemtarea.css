@@ -1,8 +1,9 @@
+/* Estilos de la tarea */
 .tarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid #000000; /* Líneas más negras */
+  border: 2px solid #000000;
   padding: 20px 25px;
   border-radius: 20px;
   background-color: #f9fafb;
@@ -35,8 +36,6 @@
   color: #4a5568;
   margin: 0;
   padding: 10px 0;
-  /* Eliminamos la línea divisoria */
-  /* border-top: none; */
 }
 
 .fecha-entrega {
@@ -61,11 +60,11 @@
 
 .estado-tarea {
   background-color: #48bb78;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 20px;
   color: white;
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 0.56rem;
   cursor: pointer;
   border: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -79,4 +78,121 @@
 
 .tarea-completada {
   color: #38a169;
+}
+
+/* Responsiveness */
+
+/* For screens 768px - 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tarea {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .nombre-tarea {
+    font-size: 1.4em;
+  }
+
+  .emoji-usuario {
+    width: 45px;
+    height: 45px;
+    font-size: 1.8em;
+  }
+
+  .estado-tarea {
+    padding: 8px 16px;
+    font-size: 1em;
+  }
+}
+
+/* For screens 1025px - 1280px */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .tarea {
+    flex-direction: row;
+    padding: 20px;
+  }
+
+  .nombre-tarea {
+    font-size: 1.6em;
+  }
+
+  .emoji-usuario {
+    width: 50px;
+    height: 50px;
+    font-size: 1.9em;
+  }
+
+  .estado-tarea {
+    padding: 10px 20px;
+    font-size: 1.1em;
+  }
+}
+
+/* For screens 1281px - 1440px */
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .tarea {
+    flex-direction: row;
+    padding: 25px;
+  }
+
+  .nombre-tarea {
+    font-size: 1.7em;
+  }
+
+  .emoji-usuario {
+    width: 55px;
+    height: 55px;
+    font-size: 2em;
+  }
+
+  .estado-tarea {
+    padding: 12px 24px;
+    font-size: 1.2em;
+  }
+}
+
+/* For screens 1441px - 1920px */
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .tarea {
+    flex-direction: row;
+    padding: 30px;
+  }
+
+  .nombre-tarea {
+    font-size: 1.8em;
+  }
+
+  .emoji-usuario {
+    width: 60px;
+    height: 60px;
+    font-size: 2.2em;
+  }
+
+  .estado-tarea {
+    padding: 14px 28px;
+    font-size: 1.3em;
+  }
+}
+
+/* For screens 1921px and beyond */
+@media (min-width: 1921px) {
+  .tarea {
+    flex-direction: row;
+    padding: 35px;
+  }
+
+  .nombre-tarea {
+    font-size: 2em;
+  }
+
+  .emoji-usuario {
+    width: 65px;
+    height: 65px;
+    font-size: 2.5em;
+  }
+
+  .estado-tarea {
+    padding: 16px 32px;
+    font-size: 1.4em;
+  }
 }

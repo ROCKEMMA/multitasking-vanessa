@@ -8,7 +8,7 @@
     border-bottom: 1px solid #e0e0e0;
     font-family: Arial, sans-serif;
     gap: 10px;
-    width: 100%; 
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -32,7 +32,7 @@
     font-weight: bold;
     font-size: 20px;
     color: rgb(0, 0, 0);
-    white-space: nowrap; 
+    white-space: nowrap;
 }
 
 /* Search Container */
@@ -78,50 +78,74 @@
     cursor: pointer;
 }
 
-/* For small screens like mobile (up to 375px) */
-@media (max-width: 375px) {
+/* Responsive Styles */
+
+/* For screens 768px - 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
     .header {
         grid-template-columns: auto 1fr auto; 
-        gap: 5px;
     }
 
     .app-name {
-        font-size: 16px; 
+        font-size: 18px;
+        
     }
 
     .search-bar {
-        max-width: 200px; 
+        max-width: 280px;
     }
 
     .add-button, .emoji-button {
-        width: 28px;
-        height: 28px;
-        font-size: 18px;
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
     }
 }
 
-/* For medium screens like tablets (up to 480px) */
-@media (max-width: 480px) {
+/* For screens 1025px - 1280px */
+@media (min-width: 1025px) and (max-width: 1280px) {
     .header {
-        grid-template-columns: auto 1fr auto; 
+        grid-template-columns: auto 1fr auto auto;
     }
 
     .app-name {
-        font-size: 18px; 
+        font-size: 20px;
     }
 
     .search-bar {
-        max-width: 250px; 
+        max-width: 320px;
     }
 
-    .add-button {
-        width: 30px;
-        height: 30px;
+    .add-button, .emoji-button {
+        width: 34px;
+        height: 34px;
+        font-size: 22px;
     }
 }
 
-/* For larger screens like desktops (up to 1366px) */
-@media (min-width: 1366px) {
+/* For screens 1281px - 1440px */
+@media (min-width: 1281px) and (max-width: 1440px) {
+    .header {
+        grid-template-columns: auto 1fr auto auto;
+    }
+
+    .app-name {
+        font-size: 22px;
+    }
+
+    .search-bar {
+        max-width: 350px;
+    }
+
+    .add-button, .emoji-button {
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+    }
+}
+
+/* For screens 1441px - 1920px */
+@media (min-width: 1441px) and (max-width: 1920px) {
     .header {
         grid-template-columns: auto 1fr auto auto;
     }
@@ -134,10 +158,30 @@
         max-width: 400px;
     }
 
-    .add-button {
+    .add-button, .emoji-button {
         width: 40px;
         height: 40px;
+        font-size: 28px;
     }
 }
 
+/* For screens 1921px and beyond */
+@media (min-width: 1921px) {
+    .header {
+        grid-template-columns: auto 1fr auto auto;
+    }
 
+    .app-name {
+        font-size: 26px;
+    }
+
+    .search-bar {
+        max-width: 450px;
+    }
+
+    .add-button, .emoji-button {
+        width: 44px;
+        height: 44px;
+        font-size: 30px;
+    }
+}
